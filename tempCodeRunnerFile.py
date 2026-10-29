@@ -1,0 +1,1 @@
+print("Total host : ", max(net.num_addresses -2, 0))
