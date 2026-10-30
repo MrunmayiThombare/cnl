@@ -5,8 +5,12 @@ s.listen(1)
 
 c, addr = s.accept()
 msg = c.recv(1024).decode()
-print("client : ",msg)
-c.send("Hello from the server !!".encode())
+a,b = map(int,msg.split())
+result = a+b
+c.send(str(result).encode())
 c.close()
 s.close()
+
+
+
  
