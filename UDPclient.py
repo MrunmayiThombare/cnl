@@ -1,7 +1,7 @@
 import socket
-s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-s.sendto(input("Message :").encode() , ("localhost",9999))
+s = socket.socket(socket.AF_INET , socket.SOCK_DGRAM)
+s.sendto(input("Enter a string : ").encode(),("localhost",9999))
 
-msg, addr = s.recvfrom(1024)
-print("Client : ",msg.decode())
+msg, recv = s.recvfrom(1024)
+print("Uppercase : ",msg.decode())
 s.close()
